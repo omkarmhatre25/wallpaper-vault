@@ -3,95 +3,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wallpaper Vault - Neon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wallpaper Vault</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0a0a0a;
-      color: #eee;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #f9f9f9;
+      color: #333;
     }
     header {
-      background: #000;
-      color: #0ff;
-      padding: 1rem 2rem;
+      background: #fff;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       text-align: center;
       font-size: 2rem;
-      letter-spacing: 2px;
-      text-shadow: 0 0 8px #0ff;
+      font-weight: bold;
     }
     .hero {
-      padding: 3rem 2rem;
       text-align: center;
-      background: radial-gradient(circle at center, #111, #000);
+      padding: 3rem 1rem 2rem;
     }
     .hero h1 {
-      font-size: 3rem;
-      color: #0ff;
-      text-shadow: 0 0 10px #0ff;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
     .hero p {
+      color: #666;
       font-size: 1.2rem;
-      color: #ccc;
     }
-    .shop {
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    .product {
-      background: #111;
-      border: 2px solid #0ff;
-      border-radius: 12px;
+    .item {
+      background: #fff;
+      border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       transition: transform 0.3s ease;
     }
-    .product:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 25px rgba(0,255,255,0.4);
+    .item:hover {
+      transform: translateY(-5px);
     }
-    .product img {
+    .item img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
-    .product h3 {
-      padding: 0.8rem 1rem 0 1rem;
-      color: #0ff;
-      text-shadow: 0 0 5px #0ff;
+    .item h3 {
+      margin: 0.8rem 1rem 0;
+      font-size: 1.1rem;
     }
-    .product p {
-      padding: 0 1rem 1rem;
-      color: #bbb;
-    }
-    .btn {
-      display: inline-block;
-      background: #0ff;
-      color: #000;
+    .item .btn {
+      display: block;
+      margin: 1rem;
+      text-align: center;
+      background: #333;
+      color: #fff;
       padding: 0.5rem 1rem;
-      margin: 0 1rem 1rem;
       border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 8px #0ff;
+      transition: background 0.3s;
     }
-    .btn:hover {
-      background: #0cc;
+    .item .btn:hover {
+      background: #000;
     }
     footer {
       text-align: center;
-      padding: 1rem;
-      background: #000;
-      color: #0ff;
-      text-shadow: 0 0 6px #0ff;
-    }
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
+      padding: 2rem 1rem;
+      background: #fff;
+      font-size: 0.9rem;
+      color: #999;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -99,33 +87,28 @@
   <header>Wallpaper Vault</header>
 
   <section class="hero">
-    <h1>Neon Art Wallpapers</h1>
-    <p>Glowing digital artwork for your screens</p>
+    <h1>Stunning Wallpapers</h1>
+    <p>Clean • Digital • Affordable</p>
   </section>
 
-  <section class="shop">
-    <div class="product">
-      <img src="https://via.placeholder.com/400x200/0000ff/ffffff?text=Neon+Blue+Wave" alt="Neon Blue Wave" />
-      <h3>Neon Blue Wave</h3>
-      <p>Bright glowing design</p>
+  <section class="gallery">
+    <div class="item">
+      <img src="https://via.placeholder.com/400x200/eeeeee/333333?text=Wallpaper+1" alt="Wallpaper 1" />
+      <h3>Modern Minimal</h3>
       <a href="mailto:vssgaming1111@gmail.com" class="btn">Buy Now</a>
     </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/400x200/ff00ff/000000?text=Purple+Storm" alt="Purple Storm" />
-      <h3>Purple Storm</h3>
-      <p>Futuristic cyber energy</p>
+    <div class="item">
+      <img src="https://via.placeholder.com/400x200/dddddd/222222?text=Wallpaper+2" alt="Wallpaper 2" />
+      <h3>Soft Gradient</h3>
       <a href="mailto:vssgaming1111@gmail.com" class="btn">Buy Now</a>
     </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/400x200/00ffff/000000?text=Digital+Grid" alt="Digital Grid" />
-      <h3>Digital Grid</h3>
-      <p>Retro-futuristic lines</p>
+    <div class="item">
+      <img src="https://via.placeholder.com/400x200/cccccc/111111?text=Wallpaper+3" alt="Wallpaper 3" />
+      <h3>Elegant Texture</h3>
       <a href="mailto:vssgaming1111@gmail.com" class="btn">Buy Now</a>
     </div>
   </section>
 
-  <footer>
-    &copy; 2025 Wallpaper Vault. Contact: vssgaming1111@gmail.com
-  </footer>
+  <footer>&copy; 2025 Wallpaper Vault · Contact: vssgaming1111@gmail.com</footer>
 </body>
 </html>
