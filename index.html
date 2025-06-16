@@ -1,83 +1,164 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallpaper Vault</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #111;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .card {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-        .card:hover {
-            transform: scale(1.03);
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .card .buy-btn {
-            display: block;
-            text-align: center;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 0;
-            font-weight: bold;
-        }
-        .card .buy-btn:hover {
-            background: #444;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wallpaper Vault</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('images/car-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      overflow-x: hidden;
+      cursor: url('https://cdn.custom-cursor.com/db/18427/32/cursor.png'), auto;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+      transition: all 0.5s ease-in-out;
+    }
+
+    header h1:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      height: 80vh;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+      transition: all 1s ease-in-out;
+    }
+
+    .slide img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Wallpaper Vault</h1>
-        <p>Stylish Car Wallpapers for Sale</p>
-    </header>
-    <section class="gallery">
+  <header>
+    <h1>Wallpaper Vault</h1>
+  </header>
 
-        <div class="card">
-            <img src="wallpaper_1.jpg" alt="Wallpaper 1">
-            <a class="buy-btn" href="mailto:vssgaming1111@gmail.com?subject=Buy Wallpaper 1">Buy Now</a>
-        </div>
-    
-        <div class="card">
-            <img src="wallpaper_2.jpg" alt="Wallpaper 2">
-            <a class="buy-btn" href="mailto:vssgaming1111@gmail.com?subject=Buy Wallpaper 2">Buy Now</a>
-        </div>
-    
-        <div class="card">
-            <img src="wallpaper_3.jpg" alt="Wallpaper 3">
-            <a class="buy-btn" href="mailto:vssgaming1111@gmail.com?subject=Buy Wallpaper 3">Buy Now</a>
-        </div>
-    
-    </section>
+  <div class="slideshow-container">
+    <div class="slide active">
+      <img src="images/wallpaper1.jpg" alt="Wallpaper 1">
+    </div>
+    <div class="slide">
+      <img src="images/wallpaper2.jpg" alt="Wallpaper 2">
+    </div>
+    <div class="slide">
+      <img src="images/wallpaper3.jpg" alt="Wallpaper 3">
+    </div>
+    <div class="slide">
+      <img src="images/wallpaper4.jpg" alt="Wallpaper 4">
+    </div>
+    <div class="slide">
+      <img src="images/wallpaper5.jpg" alt="Wallpaper 5">
+    </div>
+  </div>
+
+  <section class="gallery">
+    <img src="images/wallpaper1.jpg" alt="Wallpaper 1">
+    <img src="images/wallpaper2.jpg" alt="Wallpaper 2">
+    <img src="images/wallpaper3.jpg" alt="Wallpaper 3">
+    <img src="images/wallpaper4.jpg" alt="Wallpaper 4">
+    <img src="images/wallpaper5.jpg" alt="Wallpaper 5">
+  </section>
+
+  <footer>
+    <p>© 2025 Wallpaper Vault. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
+  </script>
 </body>
 </html>
